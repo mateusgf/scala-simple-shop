@@ -5,11 +5,11 @@
 # Home page
 GET     /                           controllers.Application.index
 
-GET     /items                      controllers.Items.list
+GET     /items                      controllers.Items.list(page: Int ?= 1)
 POST    /items                      controllers.Items.create
 GET     /items/:id                  controllers.Items.details(id: Long)
-PUT     /items/:id                  controllers.Items.update(id: Long)
-DELETE  /items/:id                  controllers.Items.delete(id: Long)
+PUT     /items/:id2                  controllers.Items.update(id2: Long)
+DELETE  /items/:id3                  controllers.Items.delete(id3: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file)
